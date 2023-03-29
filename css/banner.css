@@ -1,0 +1,47 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+body {
+  font-family: "SF Pro Display", sans-serif !important;
+}
+
+.slider {
+  width: 100%;
+}
+.label {
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  --columns: 5;
+  --gap: 15px;
+  --spacing: calc(((var(--columns) - 1) * var(--gap)) / var(--columns));
+  gap: var(--gap);
+}
+.label .label-item {
+  width: calc((100% / var(--columns)) - var(--spacing));
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.24s linear;
+}
+.label .label-item:hover {
+  opacity: 0.8;
+}
+.label .label-item img {
+  max-width: 38px;
+  width: 100%;
+}
+.label .label-item span {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  margin-top: 6.5px;
+}
+@media only screen and (max-width: 374px) {
+  .label {
+    --columns: 3;
+  }
+}
