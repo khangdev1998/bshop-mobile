@@ -181,10 +181,11 @@ body {
 .comment .comment-heading {
   margin: 8px 0;
 }
-.cooment .comment-desc {
+.comment .comment-desc {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  color: #000000;
 }
 .comment .comment-reply {
   padding-left: 12px;

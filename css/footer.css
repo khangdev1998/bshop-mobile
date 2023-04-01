@@ -25,7 +25,8 @@ body {
 }
 .support .support-item__image img {
   max-width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .support .support-item h1 {

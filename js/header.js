@@ -10,7 +10,7 @@ $(document).ready(function () {
     animation: "effectOverlay 0.24s ease-in-out",
   };
 
-  // Icon Bars and Close
+  // Button Bars
   $("#icon-close").hide();
   $("#bars").click(function () {
     $("#icon-bars").hide();
@@ -26,8 +26,8 @@ $(document).ready(function () {
     });
   });
 
-  // Category Close
-  $("#category-close").click(function () {
+   // Category Close
+   $("#category-close").click(function (e) {
     $("#menuCategory").removeClass("active");
     $("#icon-close").hide();
     $("#icon-bars").show();
@@ -45,7 +45,6 @@ $(document).ready(function () {
       $("#cart").removeClass("active");
     });
   });
-
   // Icon Close Cart
   $("#close-cart").click(function () {
     $("#cart").removeClass("active");
@@ -154,4 +153,43 @@ $(document).ready(function () {
 
     $("#icon-up6").toggleClass("rotate");
   });
+
+  function debounceFn(func, wait, immediate) {
+    let timeout;
+    return function () {
+      let context = this,
+        args = arguments;
+      let later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      let callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+  const headerSearchWrapper = $("#headerSearch-wrapper");
+  const headerTop = headerSearchWrapper && headerSearchWrapper.offset().top;
+  $(window).scroll(
+    debounceFn(function () {
+      const windowScroll = $(window).scrollTop();
+      if (windowScroll > headerTop) {
+        headerSearchWrapper.css({
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          backgroundColor: "white",
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          transition: "all 0.24s ease-in-out",
+          padding: "14px",
+        });
+        $("#search-list").hide();
+      } else {
+        headerSearchWrapper.removeAttr("style");
+        $("#search-list").show();
+      }
+    }, 50)
+  );
 });

@@ -1,13 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 body {
   font-family: "SF Pro Display", sans-serif !important;
-  padding: 12px; /* có thể xóa padding này */
 }
-.box-item {
-  /* có thể xóa class này */
-  max-width: 170px;
-}
-
 /* ================================== */
 .box-item__image img {
   -o-object-fit: cover;
