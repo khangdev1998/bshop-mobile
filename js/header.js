@@ -17,21 +17,25 @@ $(document).ready(function () {
     $("#icon-close").show();
     $("#menuCategory").addClass("active");
     $("body").prepend('<div id="overlay"></div>');
+    $("body").css("overflowY", "hidden");
+    // Overlay Shadow
     $("#overlay").css(overlayStyle);
     $("#overlay").click(function () {
       $("#overlay").detach();
       $("#menuCategory").removeClass("active");
       $("#icon-close").hide();
       $("#icon-bars").show();
+      $("body").removeAttr("style");
     });
   });
 
-   // Category Close
-   $("#category-close").click(function (e) {
+  // Category Close
+  $("#category-close").click(function (e) {
     $("#menuCategory").removeClass("active");
     $("#icon-close").hide();
     $("#icon-bars").show();
     $("#overlay").detach();
+    $("body").removeAttr("style");
   });
 
   // Button Cart
@@ -39,16 +43,20 @@ $(document).ready(function () {
     e.preventDefault();
     $("#cart").toggleClass("active");
     $("body").prepend('<div id="overlay"></div>');
+    // Overlay Shadow
     $("#overlay").css(overlayStyle);
     $("#overlay").click(function () {
       $("#overlay").detach();
       $("#cart").removeClass("active");
+      $("body").removeAttr("style");
     });
+    $("body").css("overflowY", "hidden");
   });
   // Icon Close Cart
   $("#close-cart").click(function () {
     $("#cart").removeClass("active");
     $("#overlay").detach();
+    $("body").removeAttr("style");
   });
 
   // Dropdown Category
