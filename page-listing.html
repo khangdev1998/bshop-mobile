@@ -39,12 +39,22 @@
 
     <div class="sidebar" id="sidebar">
       <div id="close-sidebar">
-        <img src="./imgs/close.svg" alt="this-is-icon" />
+        <img src="./imgs/prev.svg" alt="this-is-icon" />
       </div>
-      <div class="sidebar-wrapper">
-        <div class="dropdown-wrapper">
-          <h4>GIÁ</h4>
-          <div class="dropdown-content">
+      <div class="sidebar-top">
+        <img src="./imgs/icon-filter.svg" alt="this-is-icon" />
+        <span>Bộ lọc</span>
+      </div>
+      <div class="sidebar-body">
+          <div class="dropdown" id="dropdown-button-1">
+            <h2>GIÁ</h2>
+            <img
+              class="dropdown-icon"
+              src="./imgs/icon-up.svg"
+              alt="this-is-icon"
+            />
+          </div>
+          <div class="dropdown-content" id="dropdown-content-1">
             <div class="dropdown-content__price">
               <input type="number" value="0" />
               <span></span>
@@ -75,10 +85,15 @@
               <label for="price6">Trên 500.000 đ</label>
             </div>
           </div>
-          <div class="dropdown">
+          <div class="dropdown" id="dropdown-button-2">
             <h2>THƯƠNG HIỆU</h2>
+            <img
+              class="dropdown-icon"
+              src="./imgs/icon-up.svg"
+              alt="this-is-icon"
+            />
           </div>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdown-content-2">
             <div class="dropdown-content__item">
               <input type="checkbox" name="mark1" id="mark1" />
               <label for="mark1">Vacosi (2)</label>
@@ -136,10 +151,15 @@
               <label for="mark14">Bibury (7)</label>
             </div>
           </div>
-          <div class="dropdown">
+          <div class="dropdown" id="dropdown-button-3">
             <h2>CÔNG DỤNG</h2>
+            <img
+              class="dropdown-icon"
+              src="./imgs/icon-up.svg"
+              alt="this-is-icon"
+            />
           </div>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdown-content-3">
             <div class="dropdown-content__item">
               <input type="checkbox" name="lt1" id="lt1" />
               <label for="lt1">Dưỡng ẩm (2)</label>
@@ -161,10 +181,15 @@
               <label for="lt5">Ngừa, giảm mụn (7)</label>
             </div>
           </div>
-          <div class="dropdown">
+          <div class="dropdown" id="dropdown-button-4">
             <h2>LOẠI DA</h2>
+            <img
+              class="dropdown-icon"
+              src="./imgs/icon-up.svg"
+              alt="this-is-icon"
+            />
           </div>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdown-content-4">
             <div class="dropdown-content__item">
               <input type="checkbox" name="az1" id="az1" />
               <label for="az1">Mọi loại da (2)</label>
@@ -186,35 +211,42 @@
               <label for="az5">Da hỗn hợp (7)</label>
             </div>
           </div>
-          <div class="dropdown-content">
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz1" id="vz1" />
-              <label for="vz1">Dạng lỏng (2)</label>
-            </div>
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz2" id="vz2" />
-              <label for="vz2">Dạng kem (5)</label>
-            </div>
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz3" id="vz3" />
-              <label for="vz3">Dạng gel (3)</label>
-            </div>
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz4" id="vz4" />
-              <label for="vz4">Dạng miếng (7)</label>
-            </div>
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz5" id="vz5" />
-              <label for="vz5">Dạng giấy (7)</label>
-            </div>
-            <div class="dropdown-content__item">
-              <input type="checkbox" name="vz6" id="vz6" />
-              <label for="vz6">Dạng dầu (2)</label>
-            </div>
+          <div class="dropdown" id="dropdown-button-5">
+            <h2>KẾT CẤU</h2>
+            <img
+              class="dropdown-icon"
+              src="./imgs/icon-up.svg"
+              alt="this-is-icon"
+            />
           </div>
+          <div class="dropdown-content" id="dropdown-content-5">
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab1" id="ab1" />
+              <label for="ab1">Dạng lỏng (2)</label>
+            </div>
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab2" id="ab2" />
+              <label for="ab2">Dạng kem (5)</label>
+            </div>
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab3" id="ab3" />
+              <label for="ab3">Dạng gel (3)</label>
+            </div>
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab4" id="ab4" />
+              <label for="ab4">Dạng miếng (7)</label>
+            </div>
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab5" id="ab5" />
+              <label for="ab5">Dạng giấy (7)</label>
+            </div>
+            <div class="dropdown-content__item">
+              <input type="checkbox" name="ab6" id="ab6" />
+              <label for="ab6">Dạng dầu (2)</label>
+            </div>
         </div>
-        <a href="#!" class="sidebar__button"> Áp dụng </a>
       </div>
+      <a href="#!" class="sidebar__button"> Áp dụng </a>
     </div>
 
     <!-- ============== Js Files ==============  -->
